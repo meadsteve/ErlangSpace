@@ -11,4 +11,6 @@ cost_works() ->
   2 = shop:cost(apples).
 
 cost_works_for_lists() ->
-  17 = shop:cost([{milk, 1}, {apples, 5}]).
+  17 = shop:cost([{milk, 1}, {apples, 5}]),
+  18 = shop:cost([{oranges, 2}, {newspaper, 1}]),
+  10 = shop:cost([{milk, -1}, {apples, 5}]).

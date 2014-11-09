@@ -7,6 +7,7 @@ cost(apples)    -> 2;
 cost(pears)     -> 9;
 cost(milk)      -> 7;
 
-cost([{Item, Quantity}| RestOfList]) -> (cost(Item) * Quantity) + cost(RestOfList);
+cost([{Item, Quantity} | RestOfList]) when Quantity > 0  -> (cost(Item) * Quantity) + cost(RestOfList);
+cost([ _SillyItem | RestOfList]) -> cost(RestOfList);
 cost([]) -> 0.
 
