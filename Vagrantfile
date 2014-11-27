@@ -9,5 +9,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ubuntu/trusty64"
   config.vm.provision :shell, :path => "provisioning/git.sh"
   config.vm.provision :shell, :path => "provisioning/erlang.sh"
+  config.vm.provision :shell, :path => "provisioning/elixir.sh"
 
 end
